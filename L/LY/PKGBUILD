@@ -1,0 +1,18 @@
+# Maintainer: LY <ly-niko@qq.com>
+pkgname="dress-ly"
+pkgver="1.0.0"
+pkgrel="1"
+pkgdesc=" https://young-lord.github.io (/ω＼) "
+arch=('any')
+depends=()
+optdepends=('git')
+license=("CC-0")
+source=("1-1.webp"
+        "1-2.webp")
+sha512sums=("9bb5a6af5ed93c981e06d3b49109cc616b3ea2674fd02bb563c8e01cbf29424e3a279b0a613ce3bcf001166834e1f65fa348a3b435bb886ccc045f302f0fa04b"
+            "33ce8bfd6f87cbdf821f37c631d85ecc72e812768b27621cdfd4c2d192fa1bf8809b0771e6cd220e22d03887600c75d4e503d6b5294c0f68f15ab726f6519471")
+
+package() {
+    mkdir -p "${pkgdir}/usr/lib/dress-ly"
+    cp -r "${srcdir}/"*.webp "${pkgdir}/usr/lib/dress-ly/"
+}
